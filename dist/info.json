@@ -1,0 +1,14 @@
+{
+    "name": "DeadlockStackingForVanilla",
+    "version": "0.0.1",
+    "title": "Deadlock Stacking for Vanilla",
+    "author": "billbo99",
+    "contact": "",
+    "homepage": "https://github.com/billbo99/DeadlockStackingForVanilla",
+    "factorio_version": "0.18",
+    "dependencies": [
+        "base",
+        "deadlock-beltboxes-loaders"
+    ],
+    "description": "Stacking for Vanilla entities"
+}

@@ -1,0 +1,9 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 28-Feb-2020
+  Features:
+    - Moved the creation of vanilla entities out of DeadLock Stacked Recipes to this mod
+  Changes:
+  Bug fixes:
+  Info:
+---------------------------------------------------------------------------------------------------
