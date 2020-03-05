@@ -1,13 +1,18 @@
+local Items = require("migrations.items").items
 local rusty_locale = require("rusty-locale.locale")
 local rusty_recipes = require("rusty-locale.recipes")
 local Func = require("utils.func")
 
 local function reskin_prototype(proto, product_name)
-    local icon = string.format("stacked-%s.png", product_name)
-    proto.icons = nil
-    proto.icon = string.format("__DeadlockStackingForVanilla__/graphics/icons/%s", icon)
-    proto.icon_size = 64
-    proto.icon_mipmaps = 4
+    if Items[product_name] then
+        local icon = string.format("stacked-%s.png", product_name)
+        proto.icons = nil
+        proto.icon = string.format("__DeadlockStackingForVanilla__/graphics/icons/%s", icon)
+        proto.icon_size = 64
+        proto.icon_mipmaps = 4
+    else
+        -- log("product_name not found to reskin .. " .. product_name)
+    end
 end
 
 local function FixLocalisedNames()
