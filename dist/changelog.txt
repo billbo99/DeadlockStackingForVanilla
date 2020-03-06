@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 6-Mar-2020
+  Features:
+  Changes:
+  Bug fixes:
+    - __DeadlockStackingForVanilla__/data-final-fixes.lua:28: attempt to index field '?' (a nil value)
+  Info:
+---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 28-Feb-2020
   Features:

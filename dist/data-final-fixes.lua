@@ -25,9 +25,15 @@ local function FixLocalisedNames()
                 local stack_recipe = string.format("deadlock-stacks-stack-%s", product.name)
                 local unstack_recipe = string.format("deadlock-stacks-unstack-%s", product.name)
 
-                data.raw.item[deadlock_item_name].localised_name[2] = product_locale.name
-                data.raw.recipe[stack_recipe].localised_name[2] = product_locale.name
-                data.raw.recipe[unstack_recipe].localised_name[2] = product_locale.name
+                if data.raw.item[deadlock_item_name] then
+                    data.raw.item[deadlock_item_name].localised_name[2] = product_locale.name
+                end
+                if data.raw.recipe[stack_recipe] then
+                    data.raw.recipe[stack_recipe].localised_name[2] = product_locale.name
+                end
+                if data.raw.recipe[unstack_recipe] then
+                    data.raw.recipe[unstack_recipe].localised_name[2] = product_locale.name
+                end
 
                 if settings.startup["stack_reskin_icons"].value then
                     reskin_prototype(data.raw.item[deadlock_item_name], product.name)
