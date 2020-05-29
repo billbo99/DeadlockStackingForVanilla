@@ -9,6 +9,7 @@ data:extend(
         {type = "bool-setting", order = "0100", name = "stack_inserter", setting_type = "startup", default_value = true},
         {type = "bool-setting", order = "0100", name = "stack_pipe", setting_type = "startup", default_value = true},
         {type = "bool-setting", order = "0100", name = "stack_ammo", setting_type = "startup", default_value = true},
+        {type = "bool-setting", order = "0100", name = "stack_logistics", setting_type = "startup", default_value = true},
         {type = "bool-setting", order = "0100", name = "stack_capsule", setting_type = "startup", default_value = true},
         {type = "bool-setting", order = "0100", name = "stack_belt", setting_type = "startup", default_value = true},
         {type = "bool-setting", order = "0100", name = "stack_transport", setting_type = "startup", default_value = true},

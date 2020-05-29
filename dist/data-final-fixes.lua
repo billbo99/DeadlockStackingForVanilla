@@ -3,13 +3,19 @@ local rusty_locale = require("rusty-locale.locale")
 local rusty_recipes = require("rusty-locale.recipes")
 local Func = require("utils.func")
 
-local function reskin_prototype(proto, product_name)
+local function reskin_prototype(proto, product_name, extra_icon)
     if Items[product_name] then
         local icon = string.format("stacked-%s.png", product_name)
-        proto.icons = nil
-        proto.icon = string.format("__DeadlockStackingForVanilla__/graphics/icons/%s", icon)
-        proto.icon_size = 64
-        proto.icon_mipmaps = 4
+        proto.icons = {
+            {
+                icon = string.format("__DeadlockStackingForVanilla__/graphics/icons/%s", icon),
+                icon_size = 64,
+                icon_mipmaps = 4
+            }
+        }
+        if extra_icon then
+            table.insert(proto.icons, extra_icon)
+        end
     else
         -- log("product_name not found to reskin .. " .. product_name)
     end
@@ -36,9 +42,25 @@ local function FixLocalisedNames()
                 end
 
                 if settings.startup["stack_reskin_icons"].value then
-                    reskin_prototype(data.raw.item[deadlock_item_name], product.name)
-                    reskin_prototype(data.raw.recipe[stack_recipe], product.name)
-                    reskin_prototype(data.raw.recipe[unstack_recipe], product.name)
+                    reskin_prototype(data.raw.item[deadlock_item_name], product.name, nil)
+                    reskin_prototype(
+                        data.raw.recipe[stack_recipe],
+                        product.name,
+                        {
+                            icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/arrow-d-64.png",
+                            scale = 0.25,
+                            icon_size = 64
+                        }
+                    )
+                    reskin_prototype(
+                        data.raw.recipe[unstack_recipe],
+                        product.name,
+                        {
+                            icon = "__deadlock-beltboxes-loaders__/graphics/icons/square/arrow-u-64.png",
+                            scale = 0.25,
+                            icon_size = 64
+                        }
+                    )
                 end
             end
         end

@@ -39,14 +39,28 @@ Items.items = {
     -- pipe
     ["pipe"] = {tier = "deadlock-stacking-1", sub_group = "pipe"},
     ["pipe-to-ground"] = {tier = "deadlock-stacking-1", sub_group = "pipe"},
+    -- artillery
+    ["artillery-shell"] = {tier = "artillery", sub_group = "ammo", type = "ammo"},
+    ["rocket"] = {tier = "rocketry", sub_group = "ammo", type = "ammo"},
+    ["explosive-rocket"] = {tier = "explosive-rocketry", sub_group = "ammo", type = "ammo"},
+    ["cannon-shell"] = {tier = "tanks", sub_group = "ammo", type = "ammo"},
+    ["explosive-cannon-shell"] = {tier = "tanks", sub_group = "ammo", type = "ammo"},
+    ["uranium-cannon-shell"] = {tier = "uranium-ammo", sub_group = "ammo", type = "ammo"},
+    ["explosive-uranium-cannon-shell"] = {tier = "uranium-ammo", sub_group = "ammo", type = "ammo"},
     -- ammo
+    ["shotgun-shell"] = {tier = "military", sub_group = "ammo", type = "ammo"},
+    ["piercing-shotgun-shell"] = {tier = "military-4", sub_group = "ammo", type = "ammo"},
     ["firearm-magazine"] = {tier = "deadlock-stacking-1", sub_group = "ammo", type = "ammo"},
     ["piercing-rounds-magazine"] = {tier = "military-2", sub_group = "ammo", type = "ammo"},
     ["uranium-rounds-magazine"] = {tier = "uranium-ammo", sub_group = "ammo", type = "ammo"},
-    ["grenade"] = {tier = "military-2", sub_group = "ammo", type = "capsule"},
-    ["cluster-grenade"] = {tier = "military-4", sub_group = "ammo", type = "capsule"},
+    ["land-mine"] = {tier = "land-mine", sub_group = "ammo", type = "ammo"},
     ["stone-wall"] = {tier = "stone-walls", sub_group = "ammo"},
     ["gate"] = {tier = "gates", sub_group = "ammo"},
+    -- capsule
+    ["grenade"] = {tier = "military-2", sub_group = "ammo", type = "capsule"},
+    ["cluster-grenade"] = {tier = "military-4", sub_group = "ammo", type = "capsule"},
+    ["slowdown-capsule"] = {tier = "military-3", sub_group = "ammo", type = "capsule"},
+    ["poison-capsule"] = {tier = "military-3", sub_group = "ammo", type = "capsule"},
     -- belt
     ["transport-belt"] = {tier = "deadlock-stacking-1", sub_group = "belt"},
     ["underground-belt"] = {tier = "logistics", sub_group = "belt"},
@@ -65,6 +79,11 @@ Items.items = {
     ["hazard-concrete"] = {tier = "concrete", sub_group = "tile"},
     ["refined-concrete"] = {tier = "concrete", sub_group = "tile"},
     ["refined-hazard-concrete"] = {tier = "concrete", sub_group = "tile"},
+    -- logistics
+    ["small-electric-pole"] = {tier = "deadlock-stacking-1", sub_group = "logistics"},
+    ["medium-electric-pole"] = {tier = "electric-energy-distribution-1", sub_group = "logistics"},
+    ["big-electric-pole"] = {tier = "electric-energy-distribution-1", sub_group = "logistics"},
+    ["substation"] = {tier = "electric-energy-distribution-2", sub_group = "logistics"},
     -- raw materials
     ["explosives"] = {tier = "explosives", sub_group = "raw-material"},
     -- rocket parts
@@ -72,16 +91,25 @@ Items.items = {
     ["low-density-structure"] = {tier = "low-density-structure", sub_group = "rocket"},
     ["rocket-fuel"] = {tier = "rocket-fuel", sub_group = "rocket"},
     -- intermediates
+    ["empty-barrel"] = {tier = "fluid-handling", sub_group = "intermediates"},
     ["engine-unit"] = {tier = "engine", sub_group = "intermediates"},
     ["electric-engine-unit"] = {tier = "electric-engine", sub_group = "intermediates"},
     ["flying-robot-frame"] = {tier = "robotics", sub_group = "intermediates"},
     -- production
+    ["boiler"] = {tier = "deadlock-stacking-1", sub_group = "production"},
+    ["steam-engine"] = {tier = "deadlock-stacking-1", sub_group = "production"},
+    ["heat-pipe"] = {tier = "nuclear-power", sub_group = "production"},
+    ["heat-exchanger"] = {tier = "nuclear-power", sub_group = "production"},
+    ["steam-turbine"] = {tier = "nuclear-power", sub_group = "production"},
     ["repair-pack"] = {tier = "deadlock-stacking-1", sub_group = "production", type = "repair-tool"},
     ["solar-panel"] = {tier = "solar-energy", sub_group = "production"},
     ["accumulator"] = {tier = "electric-energy-accumulators", sub_group = "production"},
     ["stone-furnace"] = {tier = "deadlock-stacking-1", sub_group = "production"},
     ["steel-furnace"] = {tier = "advanced-material-processing", sub_group = "production"},
     ["electric-furnace"] = {tier = "advanced-material-processing-2", sub_group = "production"},
+    ["assembling-machine-1"] = {tier = "automation", sub_group = "production"},
+    ["assembling-machine-2"] = {tier = "automation-2", sub_group = "production"},
+    ["assembling-machine-3"] = {tier = "automation-3", sub_group = "production"},
     -- module
     ["beacon"] = {tier = "effect-transmission", sub_group = "module"},
     ["speed-module"] = {tier = "speed-module", sub_group = "module", type = "module"},
