@@ -1,4 +1,5 @@
 # Project exclusions
+/__python__/.idea
 /__python__/raw_input
 /__python__/raw_output
 /__python__/raw_archive

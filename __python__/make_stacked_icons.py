@@ -1,8 +1,24 @@
 import traceback
 import os
-from PIL import Image
+import re
+from PIL import Image, ImageFont, ImageDraw
 
 stacked_matrix = [
+    ((0, 0), (12, 12)),
+    ((12, 0), (0, 12)),
+    ((0, 12), (12, 0)),
+    ((12, 12), (0, 0)),
+
+    ((12, 12), (0, 12)),
+    ((0, 12), (12, 12)),
+    ((12, 12), (12, 0)),
+    ((12, 0), (12, 12)),
+
+    ((12, 12), (0, 12), (12, 0), (0, 0)),
+    ((12, 12), (12, 0), (0, 12), (0, 0)),
+    ((0, 0), (0, 12), (12, 0), (12, 12)),
+    ((0, 0), (12, 0), (0, 12), (12, 12)),
+
     ((0, 12), (0, 0), (12, 6)),
     ((12, 6), (0, 12), (0, 0)),
     ((0, 0), (12, 6), (0, 12)),
@@ -61,11 +77,14 @@ stacked_matrix = [
 
 basedir = os.path.dirname(os.path.realpath(__file__))
 
+
 def create_mips(output_folder, input_folder, filename):
     print(f"create_mips .. {filename}")
 
     input_fn = input_folder + filename
     fn, ext = os.path.splitext(filename)
+    if re.match("\d+_stacked", fn):
+        fn = re.sub("\d+_stacked", "stacked", fn)
 
     i_64 = Image.open(input_fn)
     i_32 = i_64.resize((32, 32), Image.LANCZOS)
@@ -91,9 +110,10 @@ def create_newimage(output_folder, input_folder, filename):
     img = Image.open(input_fn)
     width, height = img.size
 
+    print(f"Image mode mode ({img.mode})")
+
     if img.mode != "RGBA":
-        print(f"Image mode issue .. {fn} .. mode ({img.mode}) is expected to be RGBA")
-        return
+        img = img.convert("RGBA")
 
     if height == 64:
         i_64 = img.crop((0, 0, 64, 64))
@@ -105,23 +125,27 @@ def create_newimage(output_folder, input_folder, filename):
         print(f"Image size issue .. {fn} .. height ({height}) is expected to be 32 or 64")
         return
 
-    sheet = Image.new('RGBA', (64*9, 64*5), color=(0, 0, 0, 0))
+    rounded_up = -(-len(stacked_matrix) // 9)
+    sheet = Image.new('RGBA', (64*9, 64*rounded_up), color=(0, 0, 0, 0))
 
     count = 0
     for combo in stacked_matrix:
         newimage = Image.new('RGBA', (64, 64), color=(0, 0, 0, 0))
-        newimage.paste(i_64, combo[0], i_64)
-        newimage.paste(i_64, combo[1], i_64)
-        newimage.paste(i_64, combo[2], i_64)
-        newimage.save(f"{output_folder}{fn}/{count:02d}_stacked-{fn}{ext}")
+        for position in combo:
+            newimage.paste(i_64, position, i_64)
+
+        newimage.save(f"{output_folder}{fn}/{count:02d}_stacked-{fn}{ext}", format="png")
 
         mod = divmod(count, 9)
+
+        d = ImageDraw.Draw(newimage)
+        d.text((0, 0), f"{count:02d}", fill=(255, 255, 255))
 
         sheet.paste(newimage, (mod[1]*64, mod[0]*64))
 
         count += 1
 
-    sheet.save(f"{output_folder}{fn}{ext}")
+    sheet.save(f"{output_folder}{fn}{ext}", format="png")
 
 
 if __name__ == '__main__':
