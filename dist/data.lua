@@ -5,10 +5,22 @@ local function main()
 
     --Add stacking recipes
     for name, item in pairs(Items) do
+        local skip = false
+        if item.mod_exclude and #item.mod_exclude > 0 then
+            for k, v in pairs(item.mod_exclude) do
+                log(v)
+                if mods[v] then
+                    skip = true
+                end
+            end
+        end
+
         if se_option and se_option.value and (se_option.value == "Remove" or se_option.value == "Replace") and name == "space-science-pack" then
-            -- skip
             log("skipping stacking space-science-pack")
-        else
+            skip = true
+        end
+
+        if not skip then
             if settings.startup[string.format("stack_%s", item.sub_group)] and settings.startup[string.format("stack_%s", item.sub_group)].value then
                 local icon
                 local tech = item.tier
@@ -20,8 +32,9 @@ local function main()
                 end
                 if data.raw[item_type][name] then
                     if not data.raw.item["deadlock-stack-" .. name] then
-                        log(name)
-                        deadlock.add_stack(name, string.format("__DeadlockStackingForVanilla__/graphics/icons/%s", icon), tech, 64, item_type, 4)
+                        log("DeadlockStackingForVanilla adding stacked version of " .. name)
+                        local icon_path = string.format("__DeadlockStackingForVanilla__/graphics/icons/%s", icon)
+                        deadlock.add_stack(name, icon_path, tech, 64, item_type, 4)
                     end
                 end
             end

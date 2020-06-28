@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 4-Jun-2020
+  Changes:
+    - Added some logic so I could exclude vanila items being stacked if another mod was doing something with it .. eg Krastorio2
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 4-Jun-2020
   Changes:

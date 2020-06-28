@@ -50,9 +50,9 @@ Items.items = {
     -- ammo
     ["shotgun-shell"] = {tier = "military", sub_group = "ammo", type = "ammo"},
     ["piercing-shotgun-shell"] = {tier = "military-4", sub_group = "ammo", type = "ammo"},
-    ["firearm-magazine"] = {tier = "deadlock-stacking-1", sub_group = "ammo", type = "ammo"},
-    ["piercing-rounds-magazine"] = {tier = "military-2", sub_group = "ammo", type = "ammo"},
-    ["uranium-rounds-magazine"] = {tier = "uranium-ammo", sub_group = "ammo", type = "ammo"},
+    ["firearm-magazine"] = {tier = "deadlock-stacking-1", sub_group = "ammo", type = "ammo", mod_exclude = {"Krastorio2"}},
+    ["piercing-rounds-magazine"] = {tier = "military-2", sub_group = "ammo", type = "ammo", mod_exclude = {"Krastorio2"}},
+    ["uranium-rounds-magazine"] = {tier = "uranium-ammo", sub_group = "ammo", type = "ammo", mod_exclude = {"Krastorio2"}},
     ["land-mine"] = {tier = "land-mine", sub_group = "ammo", type = "ammo"},
     ["stone-wall"] = {tier = "stone-walls", sub_group = "ammo"},
     ["gate"] = {tier = "gates", sub_group = "ammo"},
@@ -122,13 +122,13 @@ Items.items = {
     ["productivity-module-2"] = {tier = "productivity-module-2", sub_group = "module", type = "module"},
     ["productivity-module-3"] = {tier = "productivity-module-3", sub_group = "module", type = "module"},
     -- science
-    ["automation-science-pack"] = {tier = "deadlock-stacking-1", sub_group = "science", type = "tool"},
-    ["logistic-science-pack"] = {tier = "logistic-science-pack", sub_group = "science", type = "tool"},
-    ["military-science-pack"] = {tier = "military-science-pack", sub_group = "science", type = "tool"},
-    ["chemical-science-pack"] = {tier = "chemical-science-pack", sub_group = "science", type = "tool"},
-    ["production-science-pack"] = {tier = "production-science-pack", sub_group = "science", type = "tool"},
-    ["utility-science-pack"] = {tier = "utility-science-pack", sub_group = "science", type = "tool"},
-    ["space-science-pack"] = {tier = "space-science-pack", sub_group = "science", type = "tool"}
+    ["automation-science-pack"] = {tier = "deadlock-stacking-1", sub_group = "science", type = "tool", mod_exclude = {"Krastorio2"}},
+    ["logistic-science-pack"] = {tier = "logistic-science-pack", sub_group = "science", type = "tool", mod_exclude = {"Krastorio2"}},
+    ["military-science-pack"] = {tier = "military-science-pack", sub_group = "science", type = "tool", mod_exclude = {"Krastorio2"}},
+    ["chemical-science-pack"] = {tier = "chemical-science-pack", sub_group = "science", type = "tool", mod_exclude = {"Krastorio2"}},
+    ["production-science-pack"] = {tier = "production-science-pack", sub_group = "science", type = "tool", mod_exclude = {"Krastorio2"}},
+    ["utility-science-pack"] = {tier = "utility-science-pack", sub_group = "science", type = "tool", mod_exclude = {"Krastorio2"}},
+    ["space-science-pack"] = {tier = "space-science-pack", sub_group = "science", type = "tool", mod_exclude = {"Krastorio2"}}
 }
 
 return Items
