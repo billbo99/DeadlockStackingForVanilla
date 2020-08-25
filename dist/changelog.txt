@@ -2,9 +2,9 @@
 Version: 1.0.0
 Date: 2020-08-24
   Changes:
+    - Roll to v1.0.0 to match game
     - Made rusty-locale an external dependecy
-    - Added Stacked Rocket-Parts
-    - Added Stacked Satellites
+    - Added Stacked Rocket-Parts, Satellites & Fish
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 4-Jun-2020
