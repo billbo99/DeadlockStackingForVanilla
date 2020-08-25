@@ -1,6 +1,6 @@
 local Items = require("migrations.items").items
-local rusty_locale = require("rusty-locale.locale")
-local rusty_recipes = require("rusty-locale.recipes")
+local rusty_locale = require("__rusty-locale__.locale")
+local rusty_recipes = require("__rusty-locale__.recipes")
 local Func = require("utils.func")
 
 local function reskin_prototype(proto, product_name, extra_icon)

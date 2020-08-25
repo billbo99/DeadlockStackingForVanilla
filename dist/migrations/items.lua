@@ -90,6 +90,8 @@ Items.items = {
     ["rocket-control-unit"] = {tier = "rocket-control-unit", sub_group = "rocket"},
     ["low-density-structure"] = {tier = "low-density-structure", sub_group = "rocket"},
     ["rocket-fuel"] = {tier = "rocket-fuel", sub_group = "rocket"},
+    ["rocket-part"] = {tier = "rocket-silo", sub_group = "rocket"},
+    ["satellite"] = {tier = "rocket-silo", sub_group = "rocket"},
     -- intermediates
     ["empty-barrel"] = {tier = "fluid-handling", sub_group = "intermediates"},
     ["engine-unit"] = {tier = "engine", sub_group = "intermediates"},

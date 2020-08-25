@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2020-08-24
+  Changes:
+    - Made rusty-locale an external dependecy
+    - Added Stacked Rocket-Parts
+    - Added Stacked Satellites
+---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 4-Jun-2020
   Changes:
