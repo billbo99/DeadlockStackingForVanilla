@@ -15,6 +15,7 @@ data:extend(
         {type = "bool-setting", order = "0100", name = "stack_transport", setting_type = "startup", default_value = true},
         {type = "bool-setting", order = "0100", name = "stack_tile", setting_type = "startup", default_value = true},
         {type = "bool-setting", order = "0100", name = "stack_raw-material", setting_type = "startup", default_value = true},
-        {type = "bool-setting", order = "0100", name = "stack_rocket", setting_type = "startup", default_value = true}
+        {type = "bool-setting", order = "0100", name = "stack_rocket", setting_type = "startup", default_value = true},
+        {type = "bool-setting", order = "0100", name = "stack_spidertron", setting_type = "startup", default_value = false}
     }
 )

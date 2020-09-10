@@ -94,6 +94,11 @@ Items.items = {
     ["satellite"] = {tier = "rocket-silo", sub_group = "rocket"},
     ["radar"] = {tier = "deadlock-stacking-1", sub_group = "rocket"},
     ["raw-fish"] = {tier = "deadlock-stacking-1", sub_group = "rocket", type = "capsule"},
+    -- spidertron parts
+    ["exoskeleton-equipment"] = {tier = "exoskeleton-equipment", sub_group = "spidertron"},
+    ["fusion-reactor-equipment"] = {tier = "fusion-reactor-equipment", sub_group = "spidertron"},
+    ["rocket-launcher"] = {tier = "rocketry", sub_group = "spidertron", type = "gun"},
+    ["spidertron"] = {tier = "spidertron", sub_group = "spidertron", type = "spider-vehicle"}, -- not allowed by deadlock loader mod
     -- intermediates
     ["empty-barrel"] = {tier = "fluid-handling", sub_group = "intermediates"},
     ["engine-unit"] = {tier = "engine", sub_group = "intermediates"},

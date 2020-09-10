@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2020-09-10
+  Changes:
+    - Added Spidertron parts as an opt in setting.  This stacks rocket-lauchers, fustion reactors and exo-legs.   Stacking of spidertron itself is blocked by a limitation of deadlock loaders internal checks
+---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2020-09-09
   Changes:
