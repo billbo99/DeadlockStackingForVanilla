@@ -100,6 +100,7 @@ Items.items = {
     ["rocket-launcher"] = {tier = "rocketry", sub_group = "spidertron", type = "gun"},
     ["spidertron"] = {tier = "spidertron", sub_group = "spidertron", type = "spider-vehicle"}, -- not allowed by deadlock loader mod
     -- intermediates
+    ["nuclear-fuel"] = {tier = "kovarex-enrichment-process", sub_group = "intermediates"},
     ["empty-barrel"] = {tier = "fluid-handling", sub_group = "intermediates"},
     ["engine-unit"] = {tier = "engine", sub_group = "intermediates"},
     ["electric-engine-unit"] = {tier = "electric-engine", sub_group = "intermediates"},
