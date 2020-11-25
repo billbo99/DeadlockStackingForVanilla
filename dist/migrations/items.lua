@@ -43,8 +43,8 @@ Items.items = {
     ["artillery-shell"] = {tier = "artillery", sub_group = "ammo", type = "ammo"},
     ["rocket"] = {tier = "rocketry", sub_group = "ammo", type = "ammo"},
     ["explosive-rocket"] = {tier = "explosive-rocketry", sub_group = "ammo", type = "ammo"},
-    ["cannon-shell"] = {tier = "tanks", sub_group = "ammo", type = "ammo"},
-    ["explosive-cannon-shell"] = {tier = "tanks", sub_group = "ammo", type = "ammo"},
+    ["cannon-shell"] = {tier = "tank", sub_group = "ammo", type = "ammo"},
+    ["explosive-cannon-shell"] = {tier = "tank", sub_group = "ammo", type = "ammo"},
     ["uranium-cannon-shell"] = {tier = "uranium-ammo", sub_group = "ammo", type = "ammo"},
     ["explosive-uranium-cannon-shell"] = {tier = "uranium-ammo", sub_group = "ammo", type = "ammo"},
     -- ammo
@@ -54,8 +54,8 @@ Items.items = {
     ["piercing-rounds-magazine"] = {tier = "military-2", sub_group = "ammo", type = "ammo", mod_exclude = {"Krastorio2"}},
     ["uranium-rounds-magazine"] = {tier = "uranium-ammo", sub_group = "ammo", type = "ammo", mod_exclude = {"Krastorio2"}},
     ["land-mine"] = {tier = "land-mine", sub_group = "ammo", type = "ammo"},
-    ["stone-wall"] = {tier = "stone-walls", sub_group = "ammo"},
-    ["gate"] = {tier = "gates", sub_group = "ammo"},
+    ["stone-wall"] = {tier = "stone-wall", sub_group = "ammo"},
+    ["gate"] = {tier = "gate", sub_group = "ammo"},
     -- capsule
     ["grenade"] = {tier = "military-2", sub_group = "ammo", type = "capsule"},
     ["cluster-grenade"] = {tier = "military-4", sub_group = "ammo", type = "capsule"},
