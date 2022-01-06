@@ -41,9 +41,9 @@ Items.items = {
     ["pipe-to-ground"] = {tier = "deadlock-stacking-1", sub_group = "pipe"},
     -- artillery
     ["artillery-shell"] = {tier = "artillery", sub_group = "ammo", type = "ammo"},
-    ["atomic-bomb"] = {tier = "atomic-bomb", sub_group = "ammo", type = "ammo"},
     ["rocket"] = {tier = "rocketry", sub_group = "ammo", type = "ammo"},
     ["explosive-rocket"] = {tier = "explosive-rocketry", sub_group = "ammo", type = "ammo"},
+    ["atomic-bomb"] = {tier = "atomic-bomb", sub_group = "ammo", type = "ammo"},
     ["cannon-shell"] = {tier = "tank", sub_group = "ammo", type = "ammo"},
     ["explosive-cannon-shell"] = {tier = "tank", sub_group = "ammo", type = "ammo"},
     ["uranium-cannon-shell"] = {tier = "uranium-ammo", sub_group = "ammo", type = "ammo"},
