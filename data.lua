@@ -21,7 +21,8 @@ local function main()
         end
 
         if not skip then
-            if settings.startup[string.format("stack_%s", item.sub_group)] and settings.startup[string.format("stack_%s", item.sub_group)].value then
+            local key = string.format("stack_%s", item.sub_group)
+            if settings.startup[key] and settings.startup[key].value then
                 local icon
                 local tech = item.tier
                 local item_type = item.type or "item"
