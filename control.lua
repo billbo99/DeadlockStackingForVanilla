@@ -14,7 +14,7 @@ script.on_configuration_changed(
                 for _, item in pairs(Items) do
                     if force.technologies[item.tier] and force.technologies[item.tier].researched then
                         local tech = force.technologies[item.tier]
-                        for _, effect in pairs(tech.effects) do
+                        for _, effect in pairs(tech.prototype.effects) do
                             if effect.type == "unlock-recipe" and Func.starts_with(effect.recipe, "deadlock") then
                                 recipes[effect.recipe].enabled = true
                                 recipes[effect.recipe].reload()
