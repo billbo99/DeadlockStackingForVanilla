@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2025-01-04
+  Bugfixes:
+    - Marked stacking/unstacking recipes to not auto-recycle.
+      - It was noted that recycling electronic-circuits converted into stacked-electronic-circuits.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2024-12-15
   Bugfixes:

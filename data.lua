@@ -36,6 +36,9 @@ local function main()
                         log("DeadlockStackingForVanilla adding stacked version of " .. name)
                         local icon_path = string.format("__DeadlockStackingForVanilla__/graphics/icons/%s", icon)
                         deadlock.add_stack(name, icon_path, tech, 64, item_type, 4)
+                        data.raw.item["deadlock-stack-" .. name].auto_recycle = false
+                        data.raw.recipe["deadlock-stacks-stack-" .. name].auto_recycle = false
+                        data.raw.recipe["deadlock-stacks-unstack-" .. name].auto_recycle = false
                     end
                 end
             end
