@@ -99,7 +99,6 @@ Items.items = {
     ["exoskeleton-equipment"] = { tier = "exoskeleton-equipment", sub_group = "spidertron" },
     ["fusion-reactor-equipment"] = { tier = "fusion-reactor-equipment", sub_group = "spidertron" },
     ["rocket-launcher"] = { tier = "rocketry", sub_group = "spidertron", type = "gun" },
-    ["spidertron"] = { tier = "spidertron", sub_group = "spidertron", type = "spider-vehicle" }, -- not allowed by deadlock loader mod
     -- intermediates
     ["nuclear-fuel"] = { tier = "kovarex-enrichment-process", sub_group = "intermediates" },
     ["empty-barrel"] = { tier = "fluid-handling", sub_group = "intermediates" },
