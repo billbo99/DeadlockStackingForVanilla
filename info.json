@@ -5,7 +5,7 @@
     "author": "billbo99",
     "contact": "",
     "homepage": "https://github.com/billbo99/DeadlockStackingForVanilla",
-    "factorio_version": "2.0",
+    "factorio_version": "2.1",
     "dependencies": [
         "base",
         "rusty-locale",

@@ -31,7 +31,7 @@ local function main()
                 else
                     icon = item.icon
                 end
-                if data.raw[item_type][name] then
+                if data.raw[item_type] and data.raw[item_type][name] then -- 2.1: data.raw.tool may be absent
                     if not data.raw.item["deadlock-stack-" .. name] then
                         log("DeadlockStackingForVanilla adding stacked version of " .. name)
                         local icon_path = string.format("__DeadlockStackingForVanilla__/graphics/icons/%s", icon)

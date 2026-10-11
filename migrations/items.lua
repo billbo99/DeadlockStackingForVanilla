@@ -131,14 +131,14 @@ Items.items = {
     ["productivity-module"] = { tier = "productivity-module", sub_group = "module", type = "module" },
     ["productivity-module-2"] = { tier = "productivity-module-2", sub_group = "module", type = "module" },
     ["productivity-module-3"] = { tier = "productivity-module-3", sub_group = "module", type = "module" },
-    -- science
-    ["automation-science-pack"] = { tier = "deadlock-stacking-1", sub_group = "science", type = "tool", mod_exclude = { "Krastorio2" } },
-    ["logistic-science-pack"] = { tier = "logistic-science-pack", sub_group = "science", type = "tool", mod_exclude = { "Krastorio2" } },
-    ["military-science-pack"] = { tier = "military-science-pack", sub_group = "science", type = "tool", mod_exclude = { "Krastorio2" } },
-    ["chemical-science-pack"] = { tier = "chemical-science-pack", sub_group = "science", type = "tool", mod_exclude = { "Krastorio2" } },
-    ["production-science-pack"] = { tier = "production-science-pack", sub_group = "science", type = "tool", mod_exclude = { "Krastorio2" } },
-    ["utility-science-pack"] = { tier = "utility-science-pack", sub_group = "science", type = "tool", mod_exclude = { "Krastorio2" } },
-    ["space-science-pack"] = { tier = "space-science-pack", sub_group = "science", type = "tool", mod_exclude = { "Krastorio2" } }
+    -- science (2.1: science packs are plain "item" prototypes, no longer "tool")
+    ["automation-science-pack"] = { tier = "deadlock-stacking-1", sub_group = "science", mod_exclude = { "Krastorio2" } },
+    ["logistic-science-pack"] = { tier = "logistic-science-pack", sub_group = "science", mod_exclude = { "Krastorio2" } },
+    ["military-science-pack"] = { tier = "military-science-pack", sub_group = "science", mod_exclude = { "Krastorio2" } },
+    ["chemical-science-pack"] = { tier = "chemical-science-pack", sub_group = "science", mod_exclude = { "Krastorio2" } },
+    ["production-science-pack"] = { tier = "production-science-pack", sub_group = "science", mod_exclude = { "Krastorio2" } },
+    ["utility-science-pack"] = { tier = "utility-science-pack", sub_group = "science", mod_exclude = { "Krastorio2" } },
+    ["space-science-pack"] = { tier = "space-science-pack", sub_group = "science", mod_exclude = { "Krastorio2" } }
 }
 
 if settings.startup['stack_intermediates_early'].value then
