@@ -8,7 +8,7 @@
     "factorio_version": "2.0",
     "dependencies": [
         "base",
-        "rusty-locale",
+        "flib >= 0.16.3",
         "deadlock-beltboxes-loaders >= 2.5.0"
     ],
     "description": "Stacking for Vanilla entities"
